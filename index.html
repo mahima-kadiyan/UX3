@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="Css/Slds-css/salesforce-lightning-design-system.css"/>
-    <link rel="stylesheet" href="Resources/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="Css/style.css"/>
     <script  type="text/javascript" src="Resources/style.js"></script>
 </head>
@@ -37,13 +37,17 @@
           <li class="slds-context-bar__item slds-size_4-of-12">
             <a href="javascript:void(0);" class="slds-context-bar__label-action slds-align_absolute-center"
               title="Menu Item">
-              <span class="slds-truncate" title="Menu Item"><i class="far fa-bell fa-2x"></i></span>
+              <span class="slds-truncate" title="Menu Item"><svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                <use xlink:href="/icons/utility-sprite/svg/symbols.svg#notification"></use>
+              </svg></i></span>
             </a>
           </li>
           <li class="slds-context-bar__item slds-size_4-of-12">
             <a href="javascript:void(0);" class="slds-context-bar__label-action slds-align_absolute-center"
-              title="Menu Item"><i class="fas fa-portrait fa-2x slds-m-right_small"></i>
-              <span class="slds-truncate" title="Menu Item"></i>Lorna Sharper</span><i class="slds-m-left_small fas fa-chevron-down"></i>
+              title="Menu Item"><svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                <use xlink:href="/icons/utility-sprite/svg/symbols.svg#user"></use></svg></i>
+              <span class="slds-truncate" title="Menu Item"></i>Lorna Sharper</span><svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                <use xlink:href="/icons/utility-sprite/svg/symbols.svg#chevrondown"></use></svg>
               <span class="slds-icon_container slds-icon-utility-announcement slds-m-left_x-small"
                 title="Description of icon when needed">
                 <span class="slds-assistive-text">Description of icon when needed</span>
@@ -90,39 +94,30 @@
                     </div>
                    
                 </div>
-                <!--
-
-<div class="topnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFun3()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-                -->
         <!--==================SUB HEADING================-->
         <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12 ">
             <div class="slds-grid slds-gutters">
-        <div class="slds-col slds-size_3-of-12 slds-m-top_medium">
+        <div class="slds-col slds-size_4-of-12 slds-m-top_medium slds-section-heading slds-align_absolute-center">
           <span>Investor List</span>
         </div>
         <div class="slds-col slds-size_4-of-12 slds-m-top_medium">
-            <div class="slds-form-element">
-                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
-                <input type="text" id="text-input-id-1" placeholder="Search by Name or Email…" class="slds-input" />
-                </div>
+            
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+                            <use xlink:href="sldsstyles/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                        <input type="text" id="text-input-id-1" placeholder="Search by Name or Email" class="slds-input" />
+                    </div>
                 </div>
         </div>
         <div class="slds-col slds-size_1-of-12 slds-m-top_medium">
             <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
                 <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
-                <svg class="slds-button__icon" aria-hidden="true">
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                </svg>Both<i class="fas fa-caret-down"></i>
-                <span class="slds-assistive-text">Show More</span>
+                 <span> Show <svg class="slds-button__icon" style=" fill:#303030" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                  </svg></span>
+                  <span class="slds-assistive-text">Show More</span>
                 </button>
             </div>
         </div>
@@ -138,18 +133,26 @@
         </div>
         <div class="slds-col slds-size_1-of-12 slds-m-top_medium">
             <span>
-                <button onclick="myFunction()" class="slds-button slds-button-neutral"><i class="fas fa-table fa-2x"></i></button>
-                <button onclick="myFun2()" class="slds-button slds-button-neutral"><i class="fas fa-align-justify fa-2x"></i></button>
+                <button onclick="tableView()" class="slds-button slds-button-neutral"><span class="slds-truncate" title="Menu Item">
+                    <svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#table"></use>
+                  </svg></i></span></button>
+                <button onclick="cardView()" class="slds-button slds-button-neutral"><span class="slds-truncate" title="Menu Item"><svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#tile_card_list"></use>
+                  </svg></i></span></button>
             </span>
         </div>
         <div class="slds-col slds-size_1-of-12 slds-m-top_medium">
-            <span><i class="fas fa-download fa-2x"></i></span>
+            <span class="slds-truncate" title="Menu Item">
+                <svg class="slds-icon slds-icon_small" style= "fill:#303030" aria-hidden="true">
+                <use xlink:href="/icons/utility-sprite/svg/symbols.svg#download"></use>
+              </svg></i></span>
         </div></div>
     
     <!--================CARD VIEW===========-->
-    <div class="demo-only demo-only--sizing slds-grid slds-wrap slds-m-top_large" id="myDIV">
-        <div class="slds-col slds-size_2-of-12 "></div>
-        <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
+    <div class="demo-only demo-only--sizing slds-wrap slds-m-top_large slds-grid  slds-col slds-small-size_9-of-12 slds-large-size_10-of-12" id="card1">
+        <div class="slds-grid slds-wrap">
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__2-of-10 slds-m-right_small slds-m-top_small" >
         <div class="slds-card__header slds-grid">
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                 <div class="slds-media__figure">
@@ -182,7 +185,7 @@
             <span class="slds-assistive-text">New Accounts</span>
         </footer>
         </article>
-        <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__2-of-10 slds-m-right_small slds-m-top_small" >
             <div class="slds-card__header slds-grid">
                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
                     <div class="slds-media__figure">
@@ -215,7 +218,7 @@
                 <span class="slds-assistive-text">New Accounts</span>
             </footer>
         </article>
-        <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__3-of-10 slds-m-right_small slds-m-top_small" >
             <div class="slds-card__header slds-grid">
                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
                     <div class="slds-media__figure">
@@ -248,7 +251,7 @@
                 <span class="slds-assistive-text">New Accounts</span>
             </footer>
         </article>
-        <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__3-of-10 slds-m-right_small slds-m-top_small" >
             <div class="slds-card__header slds-grid">
                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
                     <div class="slds-media__figure">
@@ -280,168 +283,229 @@
                 <button class="slds-button " style="color: #00a0ff;">View Details</button>
                 <span class="slds-assistive-text">New Accounts</span>
             </footer>
-        </article>
+        </article></div>
     </div>
     <!--ROW 2-->
-     <div class="demo-only demo-only--sizing slds-grid slds-wrap slds-m-top_large" id="myDIV">
-    <div class="slds-col slds-size_2-of-12 "></div>
-    <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
-    <div class="slds-card__header slds-grid">
-        <header class="slds-media slds-media_center slds-has-flexi-truncate">
-            <div class="slds-media__figure">
-                <span class="slds-icon_container slds-icon-standard-account" title="account">
-                    <span class="slds-assistive-text">New Accounts</span>
+    <div class="demo-only demo-only--sizing slds-wrap slds-m-top_large slds-grid  slds-col slds-small-size_9-of-12 slds-large-size_10-of-12" id="card2">
+        <div class="slds-grid slds-wrap">
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__2-of-10 slds-m-right_small slds-m-top_small" >
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-account" title="account">
+                        <span class="slds-assistive-text">New Accounts</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h1 class="slds-card__header-title">
+                    </h1>
+                </div>
+                <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <span class="slds-avatar slds-avatar_circle slds-avatar_large"
+                style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="Resources/contact2.jpg" alt="person name" />
+            </span>
+        </div>
+        <div class="slds-m-bottom_medium">
+            <div class="slds-text-align_center">Magalhães myDIV</div>
+            <div class="slds-text-align_center">xyz@abcdef.com</div>
+            <br/>
+            <div class="slds-text-align_center">Total Contributions</div>
+            <div class="slds-text-align_center">$ 821,243</div><br/>
+        </div>           
+        <footer class="slds-card__footer">
+            <button class="slds-button " style="color: #00a0ff;">View Details</button>
+            <span class="slds-assistive-text">New Accounts</span>
+        </footer>
+        </article>
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__2-of-10 slds-m-right_small slds-m-top_small" >
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                            <span class="slds-assistive-text">New Accounts</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title">
+                        </h1>
+                    </div>
+                    <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_large"
+                    style="margin-left: auto; margin-right: auto; display: block;">
+                    <img src="Resources/contact2.jpg" alt="person name" />
                 </span>
             </div>
-            <div class="slds-media__body">
-                <h1 class="slds-card__header-title">
-                </h1>
+            <div class="slds-m-bottom_medium">
+                <div class="slds-text-align_center">Magalhães myDIV</div>
+                <div class="slds-text-align_center">xyz@abcdef.com</div>
+                <br/>
+                <div class="slds-text-align_center">Total Contributions</div>
+                <div class="slds-text-align_center">$ 821,243</div><br/>
+            </div>           
+            <footer class="slds-card__footer">
+                <button class="slds-button " style="color: #00a0ff;">View Details</button>
+                <span class="slds-assistive-text">New Accounts</span>
+            </footer>
+        </article>
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__3-of-10 slds-m-right_small slds-m-top_small" >
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                            <span class="slds-assistive-text">New Accounts</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title">
+                        </h1>
+                    </div>
+                    <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
+                </header>
             </div>
-            <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
-        </header>
+            <div class="slds-card__body slds-card__body_inner">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_large"
+                    style="margin-left: auto; margin-right: auto; display: block;">
+                    <img src="Resources/contact2.jpg" alt="person name" />
+                </span>
+            </div>
+            <div class="slds-m-bottom_medium">
+                <div class="slds-text-align_center">Magalhães myDIV</div>
+                <div class="slds-text-align_center">xyz@abcdef.com</div>
+                <br/>
+                <div class="slds-text-align_center">Total Contributions</div>
+                <div class="slds-text-align_center">$ 821,243</div><br/>
+            </div>           
+            <footer class="slds-card__footer">
+                <button class="slds-button " style="color: #00a0ff;">View Details</button>
+                <span class="slds-assistive-text">New Accounts</span>
+            </footer>
+        </article>
+        <article class="slds-box slds-col slds-small-size_9-of-9  slds-large-size__3-of-10 slds-m-right_small slds-m-top_small" >
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="account">
+                            <span class="slds-assistive-text">New Accounts</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title">
+                        </h1>
+                    </div>
+                    <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_large"
+                    style="margin-left: auto; margin-right: auto; display: block;">
+                    <img src="Resources/contact2.jpg" alt="person name" />
+                </span>
+            </div>
+            <div class="slds-m-bottom_medium">
+                <div class="slds-text-align_center">Magalhães myDIV</div>
+                <div class="slds-text-align_center">xyz@abcdef.com</div>
+                <br/>
+                <div class="slds-text-align_center">Total Contributions</div>
+                <div class="slds-text-align_center">$ 821,243</div><br/>
+            </div>           
+            <footer class="slds-card__footer">
+                <button class="slds-button " style="color: #00a0ff;">View Details</button>
+                <span class="slds-assistive-text">New Accounts</span>
+            </footer>
+        </article></div>
     </div>
-    <div class="slds-card__body slds-card__body_inner">
-        <span class="slds-avatar slds-avatar_circle slds-avatar_large"
-            style="margin-left: auto; margin-right: auto; display: block;">
-            <img src="Resources/contact2.jpg" alt="person name" />
-        </span>
-    </div>
-    <div class="slds-m-bottom_medium">
-        <div class="slds-text-align_center">Magalhães myDIV</div>
-        <div class="slds-text-align_center">xyz@abcdef.com</div>
-        <br/>
-        <div class="slds-text-align_center">Total Contributions</div>
-        <div class="slds-text-align_center">$ 821,243</div><br/>
-    </div>           
-    <footer class="slds-card__footer">
-        <button class="slds-button " style="color: #00a0ff;">View Details</button>
-        <span class="slds-assistive-text">New Accounts</span>
-    </footer>
-    </article>
-    <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
-        <div class="slds-card__header slds-grid">
-            <header class="slds-media slds-media_center slds-has-flexi-truncate">
-                <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-standard-account" title="account">
-                        <span class="slds-assistive-text">New Accounts</span>
-                    </span>
-                </div>
-                <div class="slds-media__body">
-                    <h1 class="slds-card__header-title">
-                    </h1>
-                </div>
-                <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
-            </header>
-        </div>
-        <div class="slds-card__body slds-card__body_inner">
-            <span class="slds-avatar slds-avatar_circle slds-avatar_large"
-                style="margin-left: auto; margin-right: auto; display: block;">
-                <img src="Resources/contact2.jpg" alt="person name" />
-            </span>
-        </div>
-        <div class="slds-m-bottom_medium">
-            <div class="slds-text-align_center">Magalhães myDIV</div>
-            <div class="slds-text-align_center">xyz@abcdef.com</div>
-            <br/>
-            <div class="slds-text-align_center">Total Contributions</div>
-            <div class="slds-text-align_center">$ 821,243</div><br/>
-        </div>           
-        <footer class="slds-card__footer">
-            <button class="slds-button " style="color: #00a0ff;">View Details</button>
-            <span class="slds-assistive-text">New Accounts</span>
-        </footer>
-    </article>
-    <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
-        <div class="slds-card__header slds-grid">
-            <header class="slds-media slds-media_center slds-has-flexi-truncate">
-                <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-standard-account" title="account">
-                        <span class="slds-assistive-text">New Accounts</span>
-                    </span>
-                </div>
-                <div class="slds-media__body">
-                    <h1 class="slds-card__header-title">
-                    </h1>
-                </div>
-                <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
-            </header>
-        </div>
-        <div class="slds-card__body slds-card__body_inner">
-            <span class="slds-avatar slds-avatar_circle slds-avatar_large"
-                style="margin-left: auto; margin-right: auto; display: block;">
-                <img src="Resources/contact2.jpg" alt="person name" />
-            </span>
-        </div>
-        <div class="slds-m-bottom_medium">
-            <div class="slds-text-align_center">Magalhães myDIV</div>
-            <div class="slds-text-align_center">xyz@abcdef.com</div>
-            <br/>
-            <div class="slds-text-align_center">Total Contributions</div>
-            <div class="slds-text-align_center">$ 821,243</div><br/>
-        </div>           
-        <footer class="slds-card__footer">
-            <button class="slds-button " style="color: #00a0ff;">View Details</button>
-            <span class="slds-assistive-text">New Accounts</span>
-        </footer>
-    </article>
-    <article class="slds-box slds-col slds-size_2-of-12 slds-m-right_small" >
-        <div class="slds-card__header slds-grid">
-            <header class="slds-media slds-media_center slds-has-flexi-truncate">
-                <div class="slds-media__figure">
-                    <span class="slds-icon_container slds-icon-standard-account" title="account">
-                        <span class="slds-assistive-text">New Accounts</span>
-                    </span>
-                </div>
-                <div class="slds-media__body">
-                    <h1 class="slds-card__header-title">
-                    </h1>
-                </div>
-                <div class="slds-no-flex"><i class="fas fa-ellipsis-h"></i></div>
-            </header>
-        </div>
-        <div class="slds-card__body slds-card__body_inner">
-            <span class="slds-avatar slds-avatar_circle slds-avatar_large"
-                style="margin-left: auto; margin-right: auto; display: block;">
-                <img src="Resources/contact2.jpg" alt="person name" />
-            </span>
-        </div>
-        <div class="slds-m-bottom_medium">
-            <div class="slds-text-align_center">Magalhães myDIV</div>
-            <div class="slds-text-align_center">xyz@abcdef.com</div>
-            <br/>
-            <div class="slds-text-align_center">Total Contributions</div>
-            <div class="slds-text-align_center">$ 821,243</div><br/>
-        </div>           
-        <footer class="slds-card__footer">
-            <button class="slds-button " style="color: #00a0ff;">View Details</button>
-            <span class="slds-assistive-text">New Accounts</span>
-        </footer>
-    </article>
-      </div>
     </div> 
     </div>
     <!--================TABLE VIEW===========-->
-    <article class="slds-card slds-grid slds-large-size_12-of-12">
-        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-12 slds-align_absolute-center">
-           <img src="">
+        <div class="slds-col slds-grid slds-size_1-of-1 " id="table" style="display: none;">
+            <div class="container slds-grid slds-grid_vertical slds-align_absolute-center slds-wrap slds-col slds-size_1-of-1">
+                <div class="desktop-card slds-col slds-grid slds-large-size_11-of-12">
+                    <div class="slds-col slds-grid slds-large-size_12-of-12">
+                        <div class="slds-col slds-size_1-of-12"></div>
+                        <div class="slds-col slds-size_3-of-12">Name</div>
+                        <div class="slds-col slds-size_2-of-12">Total Contribution</div>
+                        <div class="slds-col slds-size_2-of-12">Total Distributions</div>
+                        <div class="slds-col slds-size_2-of-12">Total Balance</div>
+                        <div class="slds-col slds-size_1-of-12">Details</div>
+                        <div class="slds-col slds-size_1-of-12"></div>
+                    </div>
+                </div>
+            <article class="slds-col slds-size_1-of-1 card slds-grid slds-wrap slds-large-size_11-of-12 ">
+        <div class="slds-col slds-size_1-of-1 icon slds-large-size_1-of-12 slds-large-order_12"><span class="slds-icon_container slds-icon-utility-announcement " title="Description of icon when needed"> <svg class="slds-icon slds-icon_xx-small " aria-hidden="true" style="fill:black">
+                    <use xlink:href="sldsstyles/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                </svg> </span></div>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_1-of-12">
+            <div class="slds-col slds-size_1-of-3 "><span class="slds-avatar slds-avatar_circle slds-avatar_medium"
+                style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="Resources/contact2.jpg" alt="person name" />
+            </span></div>
         </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-align_absolute-center">
-            <span>Name</span>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center text-content slds-wrap slds-large-size_3-of-12">
+            <p class="title-main slds-size_1-of-1">Ivan Magalhães</p>
+            <p class="title-sub slds-size_1-of-1 mobile">abcdef@xyz.com</p>
         </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-align_absolute-center">
-            <span>Total Contribution</span>
-            <svg class="slds-icon slds-icon_medium " aria-hidden="true" style="fill:black">
-                <use xlink:href="icons/utility-sprite/svg/symbols.svg#rows"></use>
-            </svg>
-            <svg class="slds-icon slds-icon_large" aria-hidden="true" style="fill:black">
-                <use xlink:href="icons/standard-sprite/svg/symbols.svg#contact"></use>
-              </svg>
-                
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12">
+            <p class="title-sub slds-size_1-of-1 mobile">Total Contributions</p>
+            <p class="title-main slds-size_1-of-1">$ 821,243</p>
         </div>
-        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-align_absolute-center">
-            <span></span>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12 desktop-card">
+            <p class="title-main slds-size_1-of-1">$ 821,243</p>
         </div>
-
-    </article>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12 desktop-card">
+            <p class="title-main slds-size_1-of-1">$ 821,243</p>
+        </div>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_1-of-12 desktop-card">
+            <a class="slds-card__footer-action" href="javascript:void(0);">View
+            </a>
+        </div>
+        <div class="slds-align_absolute-center slds-size_1-of-1 footer mobile">
+            <a class="slds-card__footer-action" href="javascript:void(0);">View Details
+            </a>
+        </div>
+                </article>
+            <article class="slds-col slds-size_1-of-1 card slds-grid slds-wrap slds-large-size_11-of-12 ">
+        <div class="slds-col slds-size_1-of-1 icon slds-large-size_1-of-12 slds-large-order_12">
+            <span class="slds-icon_container slds-icon-utility-announcement " title="Description of icon when needed"> 
+                <svg class="slds-icon slds-icon_xx-small " aria-hidden="true" style="fill:black">
+                    <use xlink:href="sldsstyles/icons/utility-sprite/svg/symbols.svg#threedots"></use>
+                </svg> </span></div>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_1-of-12">
+            <div class="slds-col slds-size_1-of-3 "><span class="slds-avatar slds-avatar_circle slds-avatar_medium"
+                style="margin-left: auto; margin-right: auto; display: block;">
+                <img src="Resources/contact2.jpg" alt="person name" />
+            </span></div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center text-content slds-wrap slds-large-size_3-of-12">
+            <p class=" slds-size_1-of-1">Ivan Magalhães</p>
+            <p class=" slds-size_1-of-1 mobile">abcdef@xyz.com</p>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12">
+            <p class=" slds-size_1-of-1 mobile">Total Contributions</p>
+            <p class=" slds-size_1-of-1">$ 821,243</p>
+        </div>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12 desktop-card">
+            <p class=" slds-size_1-of-1">$ 821,243</p>
+        </div>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_2-of-12 desktop-card">
+            <p class="t slds-size_1-of-1">$ 821,243</p>
+        </div>
+        <div class="slds-col slds-align_absolute-center text-content slds-wrap slds-large-size_1-of-12 desktop-card">
+            <a class="slds-card__footer-action" href="javascript:void(0);">View
+            </a>
+        </div>
+        <div class="slds-align_absolute-center slds-size_1-of-1 footer mobile">
+            <a class="slds-card__footer-action" href="javascript:void(0);">View Details
+            </a>
+        </div>
+                </article>
+            </div> 
+        </div>
 </body>
 </html>

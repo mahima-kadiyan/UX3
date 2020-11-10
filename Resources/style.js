@@ -1,17 +1,23 @@
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    var y= document.getElementById("myDiv2");
+function tableView(){
+    var x = document.getElementById("card1");
+    var y= document.getElementById("card2");
+    var z=document.getElementById("table");
    // if (x.style.display === "none") {
-      x.style.display = "block";
+      x.style.display = "none";
       y.style.display="none";
+      z.style.display="block";
+
    // } else {
   }
-  function myFun2(){
-    var x = document.getElementById("myDIV");
-    var y= document.getElementById("myDiv2");
+  function cardView(){
+    var x = document.getElementById("card1");
+    var y= document.getElementById("card2");
+    var z=document.getElementById("table");
    // if (y.style.display === "none") {
-    x.style.display = "none";
+    x.style.display = "block";
       y.style.display="block";
+      z.style.display="block";
+
   }
   var navbar = document.querySelector(".navbar")
 var ham = document.querySelector(".icon")
