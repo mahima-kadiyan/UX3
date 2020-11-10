@@ -1,0 +1,67 @@
+.container{
+     margin-left: 1em;
+     margin-right: 1em;
+
+}
+.slds-page-header{
+    z-index: 2;
+    padding: .15em .15em;
+    
+}
+body{
+    background: white;
+}
+.slds-grid .slds-box{
+    border-radius: 3px;
+    box-shadow : 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* SIDE LEFT*/
+ 
+.left-sidebar{
+   background: rgb(48, 48, 48);
+   min-height: 8em;
+   padding:1% 0%;
+}
+.left-sidebar_item{
+   display:none;
+   text-justify: right;
+   padding: 1em .15em;
+}
+.icon{
+   display:block;
+}
+.icon {
+   position: absolute;
+   /* always keep ham on top of everything */
+   z-index: 1000;
+   top: 20px;
+   right: 20px;
+   width: 36px;
+   height: 36px;
+   border: none;
+   cursor: pointer;
+   background-color: transparent;
+}
+.showClose {
+   background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+ }
+ .showNav {
+   /* show the menu */
+   transform: translateY(0);
+ }
+@media(min-width:1024px){
+   .left-sidebar{
+      background: linear-gradient(-45deg, rgb(239, 243, 248) 0%, rgb(231, 246, 255) 100%);
+      min-height: 8em;
+      padding:1% 0%;
+      transform: translateX(0);
+      
+   }
+ .icon{
+      display:none;
+   }
+   .left-sidebar_item{
+      display:block;
+   }
+}
